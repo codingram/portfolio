@@ -7,3 +7,33 @@
 body {
   font-family: "Varela Round", sans-serif;
 }
+
+.smooth-bg-transition {
+  @apply transition;
+  @apply duration-500;
+  @apply ease-in-out;
+}
+
+.contact-btn {
+  @apply bg-transparent;
+  @apply tracking-wide;
+  @apply font-semibold;
+  @apply py-2;
+  @apply px-4;
+  @apply border-2;
+  @apply rounded;
+  @apply duration-200;
+  @apply transition;
+  @apply ease-in-out;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-d-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-d-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

@@ -1,12 +1,31 @@
 <template>
   <div
-    class="w-16 h-screen shadow-lg transition duration-500 ease-in-out"
+    class="flex justify-around md:w-16 md:h-screen md:block shadow-lg smooth-bg-transition z-10"
     :class="{ 'text-teal-200': darkState, 'text-gray-800': !darkState }"
   >
     <div
-      class="py-2 mb-2 cursor-pointer"
+      class="py-5 md:pb-8 md:pt-8 md:mb-2 cursor-pointer"
       @click="toggleTheme"
       v-if="!darkState"
+    >
+      <svg
+        class="w-6 h-6 mx-auto"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+        ></path>
+      </svg>
+    </div>
+    <div
+      class="py-5 md:pb-8 md:pt-8 md:mb-2 cursor-pointer"
+      @click="toggleTheme"
+      v-if="darkState"
     >
       <svg
         class="w-6 h-6 mx-auto"
@@ -22,22 +41,7 @@
         ></path>
       </svg>
     </div>
-    <div class="py-2 mb-2 cursor-pointer" @click="toggleTheme" v-if="darkState">
-      <svg
-        class="w-6 h-6 mx-auto"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-        ></path>
-      </svg>
-    </div>
-    <div class="py-2 mb-2 cursor-pointer">
+    <div class="py-5 md:py-2 md:mb-2 cursor-pointer">
       <svg class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 20 20">
         <path
           fill-rule="evenodd"
@@ -46,7 +50,7 @@
         ></path>
       </svg>
     </div>
-    <div class="py-2 mb-2 cursor-pointer">
+    <div class="py-5 md:py-2 md:mb-2 cursor-pointer">
       <svg
         class="w-6 h-6 mx-auto"
         fill="none"
@@ -61,7 +65,7 @@
         ></path>
       </svg>
     </div>
-    <div class="py-2 mb-2 cursor-pointer">
+    <div class="py-5 md:py-2 md:mb-2 cursor-pointer">
       <svg
         class="w-6 h-6 mx-auto"
         fill="none"
@@ -76,7 +80,7 @@
         ></path>
       </svg>
     </div>
-    <div class="py-2 mb-2 cursor-pointer">
+    <div class="py-5 md:py-2 md:mb-2 cursor-pointer">
       <svg
         class="w-6 h-6 mx-auto"
         stroke="currentColor"
@@ -88,7 +92,7 @@
         ></path>
       </svg>
     </div>
-    <div class="py-2 mb-2 cursor-pointer">
+    <div class="py-5 md:py-2 md:mb-2 cursor-pointer">
       <svg
         class="w-6 h-6 mx-auto"
         stroke="currentColor"

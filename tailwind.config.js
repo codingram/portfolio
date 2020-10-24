@@ -334,7 +334,7 @@ module.exports = {
       normal: "0",
       wide: "0.025em",
       wider: "0.05em",
-      widest: "0.1em"
+      widest: "0.35em"
     },
     lineHeight: {
       none: "1",
