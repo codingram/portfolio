@@ -8,7 +8,7 @@
       Software Developer
     </div>
     <div class="mt-12 text-md tracking-wide">
-      Passionate techy and Systems Design enthuiast
+      Passionate techy and Systems Design enthusiast
     </div>
     <div class="mt-12 text-md tracking-wide">
       <button

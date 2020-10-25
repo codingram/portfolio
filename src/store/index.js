@@ -16,6 +16,7 @@ export default createStore({
         bootstrap: "^4.0.0",
         tailwindcss: "1.9",
         scss: "^1.1",
+        figma: "^1.0.0",
         flexbox: "^1.0.0",
         flask: "1.9",
         mongodb: "^4.2"
