@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Layout from "../views/Layout.vue";
+import Projects from "../views/Projects.vue";
+import ContactMe from "../views/ContactMe.vue";
 import Profile from "../components/Profile.vue";
 
 const routes = [
@@ -10,7 +12,19 @@ const routes = [
     children: [
       {
         path: "",
+        redirect: "/profile"
+      },
+      {
+        path: "/profile",
         component: Profile
+      },
+      {
+        path: "/projects",
+        component: Projects
+      },
+      {
+        path: "/contact-me",
+        component: ContactMe
       }
     ]
   }
