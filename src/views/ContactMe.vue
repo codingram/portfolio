@@ -1,12 +1,12 @@
 <template>
   <div class="h-screen flex">
-    <div class="h-full w-1/2 flex flex-col justify-around">
+    <div class="h-full px-16 w-1/2 flex flex-col justify-around">
       <!-- text-section -->
       <div>
-        <div class=" text-4xl font-black text-white">
+        <div class="text-4xl font-black text-white">
           Get in touch
         </div>
-        <div class=" text-gray-400">
+        <div class="text-gray-400">
           Fill up the form and I will get back to you soon
         </div>
       </div>
@@ -14,7 +14,7 @@
       <!-- information section -->
       <div>
         <!-- phone no -->
-        <div class="flex text-white my-8">
+        <div class="info-card flex mb-6">
           <div class="icon mr-3">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -27,7 +27,7 @@
           </div>
         </div>
         <!-- email -->
-        <div class="flex text-white my-8">
+        <div class="info-card flex my-6">
           <div class="icon mr-3">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -43,7 +43,7 @@
           </div>
         </div>
         <!-- address -->
-        <div class="flex text-white my-8">
+        <div class="info-card flex mt-6">
           <div class="icon mr-3">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -60,7 +60,7 @@
       </div>
 
       <!-- social links -->
-      <div class="flex text-white w-full">
+      <!-- <div class="flex text-white w-full">
         <div class="mx-auto p-3 bg-blue-500 rounded-full">
           <svg class="w-8 h-8 " fill="currentColor" viewBox="0 0 20 20">
             <path
@@ -70,13 +70,96 @@
             ></path>
           </svg>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <!-- form section -->
     <div class="h-full w-1/2 flex flex-col justify-around">
-      <div class="">
+      <div class="w-full p-12 max-w-lg mx-auto">
+        <div class="rounded-2xl shadow-2xl bg-white h-full p-6">
+          <!-- name field -->
+          <div class=" form-group mb-4">
+            <label class=" font-bold text-coolgray-700 block mb-1" for="name">
+              Your Name
+            </label>
+            <div class="flex border border-coolgray-200 rounded-lg p-3">
+              <svg
+                class="w-6 h-6 text-coolgray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
+              </svg>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class=" bg-transparent border-none flex-grow -my-3 -mr-3 outline-none pl-3"
+              />
+            </div>
+          </div>
+          <!-- Contact field -->
+          <div class=" form-group mb-4">
+            <label
+              class=" font-bold text-coolgray-700 block mb-1"
+              for="contact"
+            >
+              Mail/Contact Number
+            </label>
+            <div class="flex border border-coolgray-200 rounded-lg p-3">
+              <svg
+                class="w-6 h-6 text-coolgray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+              <input
+                type="text"
+                name="contact"
+                id="contact"
+                class=" bg-transparent border-none flex-grow -my-3 -mr-3 outline-none pl-3"
+              />
+            </div>
+          </div>
+          <!-- message field -->
+          <div class=" form-group mb-4">
+            <label
+              class=" font-bold text-coolgray-700 block mb-1"
+              for="message"
+            >
+              Your message
+            </label>
+            <div>
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                placeholder="Message"
+                class="w-full outline-none p-3 resize-none bg-coolgray-100 focus:shadow-outline rounded-lg"
+              >
+              </textarea>
+            </div>
+          </div>
 
+          <div class="text-right">
+            <button class="send-btn focus:outline-none focus:shadow-outline">
+              Send Message
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -84,12 +167,7 @@
 
 <script>
 export default {
-  methods: {
-    getMessage: () => {
-      const arr = ["appearing shortly", "anytime here", "check back soon"];
-      return arr[Math.floor(Math.random() * arr.length)];
-    }
-  },
+  methods: {},
   computed: {
     darkState() {
       return this.$store.state.darkTheme;

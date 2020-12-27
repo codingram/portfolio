@@ -27,6 +27,43 @@ body {
   @apply ease-in-out;
 }
 
+.send-btn {
+  @apply bg-blue-700;
+  @apply text-white;
+  @apply tracking-wide;
+  @apply font-semibold;
+  @apply py-2;
+  @apply px-4;
+  @apply border-2;
+  @apply rounded-xl;
+  @apply duration-200;
+  @apply transition;
+  @apply ease-in-out;
+}
+
+.info-card {
+  @apply text-white;
+  @apply rounded-md;
+  @apply p-4;
+  @apply border-2;
+  @apply cursor-pointer;
+  @apply border-transparent;
+  @apply duration-200;
+  @apply transition;
+  @apply ease-in-out;
+}
+
+.info-card:hover {
+  @apply border-2;
+  @apply border-indigo-700;
+  @apply bg-indigo-700;
+  @apply bg-opacity-25;
+}
+
+.info-card:hover .icon {
+  @apply text-indigo-700;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .scrollbar-d-none::-webkit-scrollbar {
   display: none;
