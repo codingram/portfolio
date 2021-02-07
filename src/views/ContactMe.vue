@@ -15,7 +15,13 @@
         <!-- information section -->
         <div>
           <!-- phone no -->
-          <div class="info-card flex mb-6">
+          <div
+            class="info-card flex mb-6"
+            :class="{
+              'text-white': darkState,
+              'text-gray-800': !darkState
+            }"
+          >
             <div class="icon mr-3">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -28,7 +34,13 @@
             </div>
           </div>
           <!-- email -->
-          <div class="info-card flex my-6">
+          <div
+            class="info-card flex my-6"
+            :class="{
+              'text-white': darkState,
+              'text-gray-800': !darkState
+            }"
+          >
             <div class="icon mr-3">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -44,7 +56,13 @@
             </div>
           </div>
           <!-- address -->
-          <div class="info-card flex mt-6">
+          <div
+            class="info-card flex mt-6"
+            :class="{
+              'text-white': darkState,
+              'text-gray-800': !darkState
+            }"
+          >
             <div class="icon mr-3">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -170,10 +188,21 @@
     <div class="px-4 mt-4 flex flex-col justify-around">
       <!-- text-section -->
       <div class="text-center mb-5">
-        <div class="text-3xl font-black text-white">
+        <div
+          class="text-3xl font-black"
+          :class="{
+            'text-white': darkState,
+            'text-gray-800': !darkState
+          }"
+        >
           Get in touch
         </div>
-        <div class="text-gray-400">
+        <div
+          :class="{
+            'text-gray-400': darkState,
+            'text-gray-800': !darkState
+          }"
+        >
           Fill up the form and I will get back to you soon
         </div>
       </div>
@@ -181,7 +210,13 @@
       <!-- information section -->
       <div>
         <!-- phone no -->
-        <div class="info-card flex mb-5">
+        <div
+          class="info-card flex mb-5"
+          :class="{
+            'text-white': darkState,
+            'text-gray-800': !darkState
+          }"
+        >
           <div class="icon mr-3">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -194,7 +229,13 @@
           </div>
         </div>
         <!-- email -->
-        <div class="info-card flex mb-5">
+        <div
+          class="info-card flex mb-5"
+          :class="{
+            'text-white': darkState,
+            'text-gray-800': !darkState
+          }"
+        >
           <div class="icon mr-3">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -210,7 +251,13 @@
           </div>
         </div>
         <!-- address -->
-        <div class="info-card flex mb-5">
+        <div
+          class="info-card flex mb-5"
+          :class="{
+            'text-white': darkState,
+            'text-gray-800': !darkState
+          }"
+        >
           <div class="icon mr-3">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -229,7 +276,7 @@
 
     <!-- form section -->
     <div class="flex flex-col justify-around">
-      <div class="w-full p-4 max-w-lg mx-auto">
+      <div class="w-full p-4 md:max-w-lg mx-auto">
         <div class="rounded-2xl shadow-2xl bg-white p-6">
           <!-- name field -->
           <div class=" form-group mb-4">

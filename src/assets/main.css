@@ -42,7 +42,6 @@ body {
 }
 
 .info-card {
-  @apply text-white;
   @apply rounded-md;
   @apply p-4;
   @apply border-2;
