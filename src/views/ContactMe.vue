@@ -167,10 +167,10 @@
   </div>
 
   <div class="block md:hidden">
-    <div class="px-4 flex flex-col justify-around">
+    <div class="px-4 mt-4 flex flex-col justify-around">
       <!-- text-section -->
-      <div>
-        <div class="text-4xl font-black text-white">
+      <div class="text-center mb-5">
+        <div class="text-3xl font-black text-white">
           Get in touch
         </div>
         <div class="text-gray-400">
@@ -181,7 +181,7 @@
       <!-- information section -->
       <div>
         <!-- phone no -->
-        <div class="info-card flex mb-6">
+        <div class="info-card flex mb-5">
           <div class="icon mr-3">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -194,7 +194,7 @@
           </div>
         </div>
         <!-- email -->
-        <div class="info-card flex my-6">
+        <div class="info-card flex mb-5">
           <div class="icon mr-3">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -210,7 +210,7 @@
           </div>
         </div>
         <!-- address -->
-        <div class="info-card flex mt-6">
+        <div class="info-card flex mb-5">
           <div class="icon mr-3">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -308,7 +308,7 @@
             </div>
           </div>
 
-          <div class="text-right">
+          <div class="text-center md:text-right">
             <button class="send-btn focus:outline-none focus:shadow-outline">
               Send Message
             </button>
