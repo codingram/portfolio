@@ -6,6 +6,8 @@ import router from "./router";
 import store from "./store";
 import "./assets/main.css";
 
+document.title = "Ram Chaudhari Portfolio"
+
 createApp(App)
   .use(store)
   .use(VueParticles)
