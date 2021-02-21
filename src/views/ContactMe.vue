@@ -1,13 +1,26 @@
 <template>
+  <!-- for desktop -->
   <div class="hidden md:block">
     <div class="h-screen flex">
       <div class="h-full px-16 w-1/2 flex flex-col justify-around">
         <!-- text-section -->
         <div>
-          <div class="text-4xl font-black text-white">
+          <div
+            class="text-4xl font-black text-white"
+            :class="{
+              'text-white': darkState,
+              'text-gray-800': !darkState
+            }"
+          >
             Get in touch
           </div>
-          <div class="text-gray-400">
+          <div
+            class="text-gray-400"
+            :class="{
+              'text-white': darkState,
+              'text-gray-800': !darkState
+            }"
+          >
             Fill up the form and I will get back to you soon
           </div>
         </div>
@@ -96,6 +109,9 @@
       <div class="h-full w-1/2 flex flex-col justify-around">
         <div class="w-full p-12 max-w-lg mx-auto">
           <div class="rounded-2xl shadow-2xl bg-white h-full p-6">
+            <div class="text-sm mb-2 text-red-700" v-if="showError">
+              Not able to reach servers 😔. Try agin later!
+            </div>
             <!-- name field -->
             <div class=" form-group mb-4">
               <label class=" font-bold text-coolgray-700 block mb-1" for="name">
@@ -174,7 +190,10 @@
             </div>
 
             <div class="text-right">
-              <button class="send-btn focus:outline-none focus:shadow-outline">
+              <button
+                class="send-btn focus:outline-none focus:shadow-outline"
+                @click="submit()"
+              >
                 Send Message
               </button>
             </div>
@@ -184,6 +203,7 @@
     </div>
   </div>
 
+  <!-- for mobile -->
   <div class="block md:hidden">
     <div class="px-4 mt-4 flex flex-col justify-around">
       <!-- text-section -->
@@ -278,6 +298,10 @@
     <div class="flex flex-col justify-around">
       <div class="w-full p-4 md:max-w-lg mx-auto">
         <div class="rounded-2xl shadow-2xl bg-white p-6">
+          <div class="text-sm mb-2 text-red-700" v-if="showError">
+            Not able to reach servers 😔. Try agin later!
+          </div>
+
           <!-- name field -->
           <div class=" form-group mb-4">
             <label class=" font-bold text-coolgray-700 block mb-1" for="name">
@@ -356,7 +380,10 @@
           </div>
 
           <div class="text-center md:text-right">
-            <button class="send-btn focus:outline-none focus:shadow-outline">
+            <button
+              @click="submit()"
+              class="send-btn focus:outline-none focus:shadow-outline"
+            >
               Send Message
             </button>
           </div>
@@ -368,7 +395,23 @@
 
 <script>
 export default {
-  methods: {},
+  data() {
+    return {
+      showError: false,
+      submission: null
+    };
+  },
+  methods: {
+    submit() {
+      if (this.submission) {
+        clearTimeout(this.submission);
+      }
+      this.showError = true;
+      this.submission = setTimeout(() => {
+        this.showError = false;
+      }, 2000);
+    }
+  },
   computed: {
     darkState() {
       return this.$store.state.darkTheme;
